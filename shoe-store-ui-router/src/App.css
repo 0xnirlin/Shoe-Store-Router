@@ -17,3 +17,20 @@
   text-decoration: none;
   /* font-size: larger; */
 }
+.heading
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+
+  font-size: 25px;
+  color: rgb(55, 55, 56);
+  
+  /* color: rgb(245, 81, 136); */
+  
+}
+.cardlink
+{
+  text-decoration: none;
+}
