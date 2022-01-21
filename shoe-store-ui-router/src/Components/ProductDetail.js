@@ -3,39 +3,134 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 export const ProductDetail = () => {
-    const shoes = {
-        'shoe1': {
-            name: "Nike Air Max 270",
-            img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/209889d9-4910-4f06-9d07-18afa558b566/air-max-270-mens-shoes-KkLcGR.png"
-            ,
-            price: "$100"
+    const shoes = [
+        {
+            name: "B. toys FunKeys Toy Funky Toy Keys for Toddlers and Babies Toy Car Keys and Red remote with Light and Sounds Non",
+            price: "17.98$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/bb-04-1.jpg"
         },
-        'shoe2': {
-            name: "Nike Air Vapormax 2021",
-            img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c1d66374-cbcb-456d-a842-f7c14cb6e9d0/air-vapormax-2021-fk-mens-shoes-NpTfFz.png",
-            price: "$100"
+        {
+            name: "Boudreaux Butt Paste Diaper Rash Cream, Maximum Strength, 4 Oz Tube ",
+            price: "13.48$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/bb-09-1.jpg"
         },
-        'shoe3': {
-            name: "Nike Blazer Mid",
-            img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/389b709e-5102-4e55-aa5d-07099b500831/blazer-mid-77-vintage-mens-shoes-nw30B2.png",
-            price: "$100"
+        {
+            name:"  The 3-Step Cradle Cap System by Fridababy | DermaFrida The FlakeFixer | Sponge, Brush, Comb and Storage Stand for Babies                     ",
+            price: "49.98$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/bb-10-1.jpg"
         },
-        'shoe4': {
-            name: "Nike SB Baloom",
-            img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1b26b9e8-bb27-43ea-8c51-3bed04fa5628/sb-zoom-blazer-mid-skate-shoes-qX3MZV.png",
-            price: "$100"
+        {
+            name:" aden + anais Burpy Bib, 100% Cotton Muslin, Soft Absorbent 4 Layers, Multi-Use Burp Cloth and Bib, 22.5 X 11, 2 Pack   ",
+            price: "13.00$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/bb-01-1.jpg"
         },
-        'shoe5': {
-            name: "Nike Air Zoom Pegasus",
-            img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d199515a-a0d1-4880-aba4-f92ddcbe7695/air-zoom-pegasus-38-mens-road-running-shoes-lq7PZZ.png",
-            price: "$100"
+        {
+            name:"Baby Bum Brush, Mini Diaper Rash Ceram Applicator with Travel Case, Soft Flexible Silicone, Unique Gift for Boys and ",
+            price: "20.00$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/bb-05-1.jpg"
         },
-        'shoe6': {
-            name: "Nike Zoom X Invincible",
-            img: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b6264bef-660d-4421-8138-df52dd395c14/zoomx-invincible-run-flyknit-mens-road-running-shoes-sP2zk7.png",
-            price: "$100"
-        }
-    }
+        {
+            name:"American Baby Company Waterproof Fitted Crib and Toddler Protective Mattress Pad Cover, White (Pack of 1), for Boys and",
+            price: "8.49$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/bb-08-1.jpg"
+        },
+        {
+            name:"4-Spotlight Mini 50X Solar-Powered LED Spotlight (Warm White LED), Black Finish, Outdoor Garden Yard Landscape Downlight",
+            price: "8.45$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/GO-02-2.jpg"
+        },
+        {
+            name:"4TH Emotion Fall Pumpkin Patch Truck Throw Pillow Cover Autumn Farmhouse Market Cushion Case for Sofa Couch 18by18 Inches",
+            price: "20.00$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/GO-03-2.jpg"
+        },
+        {
+            name:"ANKACE LED Grow Light, Timing, 5 Dimmable Levels, Plant Grow Light for Indoor Plant with Full Spectrum & Red Blue",
+            price: "80.00$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/GO-01-1-1.jpg"
+        },
+        {
+            name:" 3M Scotch-Brite Dobie All Purpose Pads, 3Count (Pack of 4) Total 12 Pads ",
+            price: "10.94$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/BC-004-1.jpg"
+        },
+        {
+            name:" BLACK+DECKER dustbuster Handheld Vacuum, Cordless, 16V (CHV1410L) , 21oz , Blue  ",
+            price: "3.98$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/HK-06-1.jpg"
+        },
+        {
+            name:"Storage Slider Value Pack 30   ",
+            price: "4.84$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/BC-009-1-1.jpg"
+        },
+        {
+            name:"Brita Extra Large 18 Cup Filtered Water Dispenser with 1 Standard Filter, Made without BPA, UltraMax, Black    ",
+            price: "6.14$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/HK-08-1.jpg"
+        },
+        {
+            name:"COSORI Air Fryer Max XL(100 Recipes) Digital Hot Oven Cooker, One Touch Screen with 13 Cooking Functions, Preheat and Shake Reminder, 5.8 QT, Black",
+            price: "11.14$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/HK-09-1.jpg"
+        },
+        {
+            name:"COCOCKA 32.8ft RGB LED Strip Lights, Bluetooth Color Changing LED Lights with App Control, Remote, Control Box 28Scenes ",
+            price: "22.28$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/HK-10-1.jpg"
+        },
+        {
+            name:"Feliway Classic Cat Calming Diffuser Kit for Cats (30 Day Starter Kit) Reduce Problem Scratching, Spraying, and Hiding",
+            price: "23.10$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/PS-12-1.jpg"
+        },
+        {
+            name:" Educator E-Collar Remote Dog Training Collar ",
+            price: "35.98$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/PS-11-1.jpg"
+        },
+        {
+            name:"Bil-Jac (6 Pack) Americas Vet Dogs Skin and Coat Dog Treats, 10 Ounces Each",
+            price: "10.98$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/PS-06-1.jpg"
+        },
+        {
+            name:"CatGuru Cat Litter Scoop Holder ",
+            price: "16.98$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/PS-08-1.jpg"
+        },
+        {
+            name:"Nifty Coffee Pod Carousel Compatible with K-Cups, 35 Pod Pack Storage, Spins 360-Degrees, Lazy Susan Platform, Modern",
+            price: "4.00$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/THI-05-1.jpg"
+        },
+        {
+            name:"Sunex 1848, 1/4 Inch Drive Master Impact Socket Set, 48-Piece, SAE/Metric, 3/16 Inch 9/16 Inch, 4mm 15mm, Standard",
+            price: "35.95$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/THI-06-1.jpg"
+        },
+        {
+            name:"The Original Asia 18 Teak Shower Bench ",
+            price: "14.95$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/THI-07-1.jpg"
+        },
+        {
+            name:"American Greetings Paw Patrol Party Supplies Pink Disposable Paper Lunch Napkins, 48-Count",
+            price: "24.66$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/TG-01-1.jpg"
+        },
+        {
+            name:" Barbie Glam Convertible, Pink/Black",
+            price: "44.66$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/TG-02-1.jpg"
+        },
+        {
+            name:"Bedtime Originals Choo Choo Express Plush Elephant Humphrey ",
+            price: "102.96$",
+            img: "https://mahrizllc.com/wp-content/uploads/2021/11/TG-03-1.jpg"
+        },
+     
+    ]
     const { productID } = useParams();
     const product = shoes[productID];
     console.log(productID)
@@ -78,8 +173,12 @@ export const ProductDetail = () => {
                     <div className='text'>
 
                         <Typography variant="body" >
-                            Nike's first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike's greatest innovation with its large window and fresh array of colors.
-                            Nike's first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike's greatest innovation with its large window and fresh array of colors.
+                           {product.name}
+                           {product.name}
+                           {product.name}
+                           {product.name}
+                           {product.name}
+                           {product.name}
                         </Typography>
 
                     </div>

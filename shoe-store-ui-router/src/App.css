@@ -2,6 +2,7 @@
 {
   padding: 0px;
   margin: 0px;
+  transition: 1s;
 }
 
 .nav
@@ -51,6 +52,49 @@
   height: 200px;
 }
 
+.buy, .cart
+{
+  padding: 12px;
+  margin: 5px 0px ;
+  width: 100%;
+  color: white;
+  border: none;
+  background-color: #174692;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.buy {
+  color: white;
+  position: relative;
+  border: none;
+  /* padding: 2rem 3rem; */
+  background: #174692;
+  /* border-radius: 1rem; */
+  font-weight: bold;
+  /* font-size: 2rem; */
+  cursor: pointer;
+  overflow: hidden;
+}
+.buy:hover
+{
+  background-color: rgb(207, 24, 64);
+
+  
+}
+.cart:hover
+{
+  background-color: rgb(207, 24, 64);
+
+  
+}
+
+.buy:hover::after {
+  opacity: 0.4;
+  
+}
 @media only screen and (max-width: 600px) {
   .cardmedia {
     width: 300px;

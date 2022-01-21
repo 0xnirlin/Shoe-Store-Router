@@ -14,8 +14,7 @@ function App() {
     <div className="App">
      <Appbar ></Appbar>
         <Routes>
-          <Route path = "/" element = {<Home></Home>}></Route>
-          <Route path = "products" element = {<Products></Products>}>
+          <Route path = "/" element = {<Home></Home>}>
             <Route path = "" element = {<ProductIndex></ProductIndex>}></Route>
             <Route path = ":productID" element = {<ProductDetail></ProductDetail>}></Route>
           </Route>
